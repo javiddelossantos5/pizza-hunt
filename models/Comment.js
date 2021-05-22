@@ -37,7 +37,8 @@ const CommentSchema = new Schema(
         },
         createdAt: {
             type: Date,
-            default: Date.now
+            default: Date.now,
+            get: createdAtVal => dateFormate(createdAtVal)
         },
 
         // gets value from the reply Schema
